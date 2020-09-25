@@ -321,6 +321,10 @@ contract BlackList is Ownable, BasicToken {
         emit AddedBlackList(_scammerUser);
     }
 
+    // We charged a fee and role to avoid people use this maliciously  //
+    // Only investor will be able to add an address to Yellow list, is //
+    // first step to add it to the black list by the community         //
+
     function addYellowList (address _badUser) public payable {
     require(balances[msg.sender] >= InvestorCap, "Not have the investor role to add address to yellow list");
     require(msg.value >= YellowFees, "Not enough ether to add this address to yellow list");
