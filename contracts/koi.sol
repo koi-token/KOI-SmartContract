@@ -366,11 +366,11 @@ contract KoiToken is Pausable, StandardToken, BlackList {
         uint _decimals) 
         
         public {
-        _totalSupply = 1000000000000000000;
-        name = "KOI TOKEN";
-        symbol = "KOI";
-        decimals = 8;
-        balances[msg.sender] = _totalSupply;
+        _totalSupply = _initialSupply;
+        name = _name;
+        symbol = _symbol;
+        decimals = _decimals;
+        balances[msg.sender] = _initialSupply;
         deprecated = false;
     }
 
