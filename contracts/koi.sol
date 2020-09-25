@@ -297,20 +297,38 @@ contract Pausable is Ownable {
   }
 }
 
+
 contract BlackList is Ownable, BasicToken {
+
+    uint256 YellowFees = 0;
+    uint256 InvestorCap = 0;
+
 
     /////// Getters to allow the same blacklist to be used also by other contracts (including upgraded KOI) ///////
     function getBlackListStatus(address _maker) external view returns (bool) {
         return isBlackListed[_maker];
     }
 
-   
+    function getYellowListStatus(address _yw) external view returns (bool) {
+        return isYellowListed[_yw];
+    }
 
     mapping (address => bool) public isBlackListed;
+    mapping (address => bool) public isYellowListed;
     
-    function addBlackList (address _scamerUser) public onlyOwner {
-        isBlackListed[_scamerUser] = true;
-        emit AddedBlackList(_scamerUser);
+    function addBlackList (address _scammerUser) public onlyOwner {
+        isBlackListed[_scammerUser] = true;
+        emit AddedBlackList(_scammerUser);
+    }
+
+    function addYellowList (address _badUser) public payable {
+    require(balances[msg.sender] >= InvestorCap, "Not have the investor role to add address to yellow list");
+    require(msg.value >= YellowFees, "Not enough ether to add this address to yellow list");
+            if (msg.value > YellowFees) {
+                msg.sender.transfer(msg.value - YellowFees);
+            }
+            isYellowListed[_badUser] = true;
+            emit AddedYellowList(_badUser);
     }
 
     function removeBlackList (address _clearedUser) public onlyOwner {
@@ -326,9 +344,20 @@ contract BlackList is Ownable, BasicToken {
         emit DestroyedBlackFunds(_blackListedUser, dirtyFunds);
     }
 
+    function setYellowFees(uint256 _fees) external onlyOwner {
+        YellowFees = _fees;
+    }  
+
+    function setInvestorCap(uint256 _cap) external onlyOwner {
+        InvestorCap = _cap;
+    }  
+
+
     event DestroyedBlackFunds(address _blackListedUser, uint _balance);
 
     event AddedBlackList(address _user);
+
+    event AddedYellowList(address _user);
 
     event RemovedBlackList(address _user);
 
