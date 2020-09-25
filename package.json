@@ -1,0 +1,27 @@
+{
+  "name": "koitoken",
+  "version": "1.2.0",
+  "description": "Upgrade of the contract of Koi token Project, increasing security issues.",
+  "main": "truffle.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "dev": "lite-server",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Koi team",
+  "license": "ISC",
+  "devDependencies": {
+    "lite-server": "^2.3.0"
+  },
+  "dependencies": {
+    "openzeppelin-solidity": "^3.2.0"
+  },
+  "keywords": [
+    "koi",
+    "token",
+    "koi",
+    "koitoken"
+  ]
+}
