@@ -15,15 +15,15 @@ Muchas de las desventajas de la implementación de un sistema descentralizado ra
 ## Ecosistema
 
 	   ++++++++++++++++++++++
-	   |   **Ecosistema KOI**   |
-	   ++++++++++++++++++++++
-	   |  Mercado FIAT-KOI  |           +++++++++++++++
-	   |      Juegos        |           | **Verificador** |      ++++++++++++++++++
+	   |   Ecosistema KOI   |
+	   ++++++++++++++++++++++                                  ++++++++++++++++++ 
+	   |  Mercado FIAT-KOI  |           +++++++++++++++        |  Red Ethereum  |
+	   |      Juegos        |           | Verificador |        ++++++++++++++++++
 	   |    App Fitness     |           +++++++++++++++        |   Exchanges    |
 	   |   App Mensajeria   |     =>    |  Blockchain |   =>   |     Dapps      |
 	   |   Coleccionables   |     <=    |   Ethereum  |   <=   |     Swaps      |
 	   |      Staking       |           +++++++++++++++        | ERC-20 Wallets | 
-	   |       PoU          |                                 ++++++++++++++++++
+	   |       PoU          |                                  ++++++++++++++++++
 	   |     Referidos      |
 	   |   P2P, P2B, B2B    |
 	   ++++++++++++++++++++++
