@@ -14,9 +14,9 @@ Muchas de las desventajas de la implementación de un sistema descentralizado ra
 
 ## Ecosistema
 
-   ++++++++++++++++++++++
+   |++++++++++++++++++++|
    |   Ecosistema KOI   |
-   ++++++++++++++++++++++
+   |++++++++++++++++++++|
    |Mercado FIAT-KOI    |
    |Juegos              |                                 ++++++++++++++++++
    |App Fitness         |           ++++++++++++++        |   Exchanges    |
@@ -26,5 +26,5 @@ Muchas de las desventajas de la implementación de un sistema descentralizado ra
    |PoU                 |                                 ++++++++++++++++++
    |Referidos           |
    |P2P, P2B            |
-   ++++++++++++++++++++++
+   |+++++++++++++++++++++
 
